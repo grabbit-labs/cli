@@ -1,0 +1,21 @@
+{
+  "name": "@grabbit-labs/cli",
+  "version": "0.0.0",
+  "description": "CLI package for grabbit-labs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"No tests yet\"",
+    "build": "echo \"No build step configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "private": "false",
+  "bin": {
+    "grabbit": "bin/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
