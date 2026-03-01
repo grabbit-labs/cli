@@ -1,3 +1,13 @@
 #!/usr/bin/env node
 
-console.log("@grabbit-labs/cli is set up. Replace this with real commands.");
+import { runCli } from "../src/index.js";
+
+runCli(process.argv.slice(2))
+  .then((exitCode) => {
+    process.exitCode = typeof exitCode === "number" ? exitCode : 0;
+  })
+  .catch((error) => {
+    const message = error instanceof Error ? error.message : String(error);
+    console.error(`grabbit: ${message}`);
+    process.exitCode = 1;
+  });

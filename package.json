@@ -1,10 +1,10 @@
 {
   "name": "@grabbit-labs/cli",
   "version": "0.0.0",
-  "description": "CLI package for grabbit-labs",
+  "description": "CLI for turning browser workflows into reusable APIs",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"No tests yet\"",
+    "test": "node --test",
     "build": "echo \"No build step configured\""
   },
   "keywords": [],
@@ -21,5 +21,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/grabbit-labs/cli"
+  },
+  "dependencies": {
+    "agent-browser": "^0.15.1",
+    "commander": "^14.0.1",
+    "zod": "^4.1.7"
   }
 }
