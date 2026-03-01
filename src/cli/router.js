@@ -359,7 +359,7 @@ async function runNativeCli(args, dependencies = {}) {
       list.push(value);
       return list;
     })
-    .option("--navigation <spec>", "Navigation step action[:url][:value][:selector]", (value, list = []) => {
+    .option("--navigation <spec>", "Navigation step action[:url][:value][:selector] (or action|url|value|selector)", (value, list = []) => {
       list.push(value);
       return list;
     })
@@ -401,7 +401,7 @@ async function runNativeCli(args, dependencies = {}) {
       list.push(value);
       return list;
     })
-    .option("--navigation <spec>", "Navigation step action[:url][:value][:selector]", (value, list = []) => {
+    .option("--navigation <spec>", "Navigation step action[:url][:value][:selector] (or action|url|value|selector)", (value, list = []) => {
       list.push(value);
       return list;
     })
@@ -446,7 +446,7 @@ async function runNativeCli(args, dependencies = {}) {
       list.push(value);
       return list;
     })
-    .option("--navigation <spec>", "Navigation step action[:url][:value][:selector]", (value, list = []) => {
+    .option("--navigation <spec>", "Navigation step action[:url][:value][:selector] (or action|url|value|selector)", (value, list = []) => {
       list.push(value);
       return list;
     })

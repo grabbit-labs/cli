@@ -113,11 +113,12 @@ export function parseOutputSpec(spec) {
 }
 
 export function parseNavigationSpec(spec) {
-  const [actionRaw, urlRaw, valueRaw, selectorRaw] = spec.split(":");
+  const delimiter = spec.includes("|") ? "|" : ":";
+  const [actionRaw, urlRaw, valueRaw, selectorRaw] = spec.split(delimiter);
   const action = actionRaw?.trim();
   if (!action) {
     throw new CliError(
-      `Invalid navigation entry "${spec}". Expected format "action[:url][:value][:selector]".`,
+      `Invalid navigation entry "${spec}". Expected format "action[:url][:value][:selector]" or "action|url|value|selector".`,
       { code: "INVALID_NAVIGATION_SPEC" },
     );
   }
