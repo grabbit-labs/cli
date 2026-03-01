@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "type": "module",
-  "private": "false",
+  "private": false,
   "bin": {
     "grabbit": "bin/cli.js"
   },
