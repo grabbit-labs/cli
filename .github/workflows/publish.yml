@@ -5,12 +5,13 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
 
     steps:
       - name: Checkout
@@ -19,7 +20,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
+          registry-url: https://registry.npmjs.org
 
       - name: Install dependencies
         run: |
@@ -37,5 +39,3 @@ jobs:
 
       - name: Publish package
         run: npm publish --provenance --access public
-        env:
-          NPM_CONFIG_REGISTRY: https://registry.npmjs.org
